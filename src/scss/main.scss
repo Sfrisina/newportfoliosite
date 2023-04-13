@@ -2,10 +2,11 @@ $primary-color: #010c2a;
 $secondary-color: #d62828;
 $accent-color: #f77f00;
 $text-color: #fffd7d;
-$info-color: #eae2b7;
+$info-color: #eae3b8;
 
 html, 
 body {
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
    font-size: 10px;
@@ -14,8 +15,50 @@ body {
    color: $text-color;
    font-family: Chivo mono, sans-serif;
 }
-
-
 button {
     background-color: $secondary-color;
+    color: $info-color;
 }
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+    color: $primary-color;
+    font-size: 1.6rem;
+    background-color: $info-color;
+ }
+
+ #homeLink{
+    font-size: 2.1rem;
+    color: $primary-color;
+    text-decoration: none;
+ }
+ .mobileNav{
+    display: none;
+ }
+ @media only screen and (max-width: 796px ){
+    .mobileNav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar{
+        display: none;
+    }
+    #mobileHomeLink{
+        display: block;
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        color: $info-color;
+        text-decoration: none;
+    }
+    #mobile-icon{
+        width: 25%;
+        color: $info-color;
+    }
+    path{
+        color: $info-color;
+    }
+ }
