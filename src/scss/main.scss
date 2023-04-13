@@ -1,0 +1,13 @@
+$primary-color: #010c2a;
+$secondary-color: #d62828;
+$accent-color: #f77f00;
+$text-color: #fffd7d;
+$info-color: #eae2b7;
+
+body{
+    background-color: $primary-color;
+    color: $text-color;
+}
+button {
+    background-color: $secondary-color;
+}
