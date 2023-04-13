@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import Header from './components/Header'
 import './scss/main.scss'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Navbar />
       <Header />
       <div>
         <a href="https://vitejs.dev" target="_blank">
