@@ -1,19 +1,6 @@
 import React, {forwardRef} from 'react'
 
 const Contact = (props, ref) => {
-
-  // const [formStatus, setFormStatus] = React.useState('Send Message')
-  // const onSubmit = (e) => {
-  //   e.preventDefault()
-  //   setFormStatus('Submitting...')
-  //   const { name, email, message } = e.target.elements
-  //   let conFom = {
-  //     name: name.value,
-  //     email: email.value,
-  //     message: message.value,
-  //   }
-  //   console.log(conFom)
-  // }
   return (
     <>
     <div ref={ref} id={'contactSect'} className="section-head-contact">

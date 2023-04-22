@@ -2,6 +2,7 @@ import React from 'react'
 import { forwardRef } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
+import sweResume from '../assets/Salfrisina-SWE0406.pdf'
 
 
 
@@ -19,7 +20,7 @@ const Navbar = ({homeClick, showNavbar, skillSect, projectScroll, contactSect}, 
         <span onClick={skillSect}>Skills</span>
         <span onClick={projectScroll}>Projects</span>
         <span onClick={contactSect}>Contact</span>
-        <span><a href='src\assets\Salfrisina-SWE0406.pdf' target="_blank">Resume</a></span>
+        <span><a href={sweResume} target="_blank">Resume</a></span>
         <FontAwesomeIcon className='nav-button navbar-button-close ' onClick ={showNavbar} icon={faTimes}/>
        </div>
       
