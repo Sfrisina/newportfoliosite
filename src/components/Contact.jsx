@@ -21,6 +21,7 @@ const Contact = (props, ref) => {
 
     <div className="contact-form">
       <form name="contact" onSubmit={onSubmit} data-netlify="true">
+      <input type="hidden" name="form-name" value="name_of_my_form" />
         <div className='contact-info-1'>
         <div className="name-form">
           <label className="form-label" htmlFor="name">
