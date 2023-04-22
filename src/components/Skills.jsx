@@ -1,5 +1,12 @@
 import React, {forwardRef} from 'react'
 
+import reactIcon from '../assets/icons/icons8-react.svg'
+import html5Icon from '../assets/icons/icons8-html-5.svg'
+import css3Icon from '../assets/icons/icons8-css3.svg'
+import jsIcon from '../assets/icons/icons8-javascript.svg'
+import sassIcon from '../assets/icons/icons8-sass.svg'
+import tailwindIcon from '../assets/icons/icons8-tailwind-css.svg'
+
 const Skills = (props, ref) => {
   return (
     <>
@@ -10,14 +17,14 @@ const Skills = (props, ref) => {
                 <h3 className="skill-text">Front-End</h3>
                 <div className='skill-list'>
                     <div>
-                    <img className='skill-icon' src='src\assets\icons\icons8-html-5.svg'/>
-                    <img className='skill-icon' src='src\assets\icons\icons8-css3.svg'/>
-                    <img className='skill-icon' src='src\assets\icons\icons8-react.svg'/>
+                    <img className='skill-icon' src={html5Icon}/>
+                    <img className='skill-icon' src={css3Icon}/>
+                    <img className='skill-icon' src={reactIcon}/>
                     </div>
                     <div>
-                    <img className='skill-icon' src='src\assets\icons\icons8-javascript.svg'/>
-                    <img className='skill-icon' src='src\assets\icons\icons8-sass.svg'/>
-                    <img className='skill-icon' src='src\assets\icons\icons8-tailwind-css.svg'/>
+                    <img className='skill-icon' src={jsIcon}/>
+                    <img className='skill-icon' src={sassIcon}/>
+                    <img className='skill-icon' src={tailwindIcon}/>
                     </div>
                 </div>
 
