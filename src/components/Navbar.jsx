@@ -1,27 +1,32 @@
 import React from 'react'
+import { forwardRef } from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+
+
+const Navbar = ({homeClick, showNavbar, skillSect, projectScroll, contactSect}, navRef) => {
   return (
   <>
   <header>
     <div className='mobileNav'>
-        <a id="mobileHomeLink" href="index.html">Sal Frisina</a>
-        <svg id="mobile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        <span id="mobileHomeLink">Sal Frisina</span>
+        <FontAwesomeIcon className="nav-button navbar-button-open" icon={faBars} onClick={showNavbar} />
     </div>
-    <nav className='navbar'> 
-      <div className='nav-links'>
-        <span>About</span>
-        <span>Skills</span>
-        <div>
-          <a id="homeLink" href="index.html">Sal Frisina</a>
-        </div>
-        <span>Projects</span>
-        <span>Contact</span>
+    <nav  className='navbar'> 
+      <div ref={navRef} className='nav-links'>
+        <span onClick={homeClick}>Home</span>
+        <span onClick={skillSect}>Skills</span>
+        <span onClick={projectScroll}>Projects</span>
+        <span onClick={contactSect}>Contact</span>
+        <span><a href='src\assets\Salfrisina-SWE0406.pdf' target="_blank">Resume</a></span>
+        <FontAwesomeIcon className='nav-button navbar-button-close ' onClick ={showNavbar} icon={faTimes}/>
        </div>
+      
     </nav>
     </header>
   </>
   )
 }
 
-export default Navbar
+export default forwardRef(Navbar)

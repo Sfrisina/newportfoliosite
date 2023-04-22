@@ -1,38 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Header from './components/Header'
+import React, {useRef} from 'react' 
+import Main from './components/Main'
 import './scss/main.scss'
 import Navbar from './components/Navbar'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const appRef = useRef(null)
+  const navRef = useRef(null)
+  const skillRef = useRef(null)
+  const projectRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const homeClick = () => {
+    navRef.current.classList.toggle('mobileNav-res')
+    appRef.current?.scrollIntoView({ behavior: 'smooth'})
+  }
+  const showNavbar= () => {
+    navRef.current?.classList.toggle('mobileNav-res')
+  }
+  const skillSect = () => {
+    navRef.current.classList.toggle('mobileNav-res')
+    skillRef.current?.scrollIntoView({behavior: 'smooth'})
+  }
+  const projectScroll = () => {
+    navRef.current.classList.toggle('mobileNav-res')
+    projectRef.current?.scrollIntoView({behavior: 'smooth'})
+  }
+  const showProjects = () => {
+    projectRef.current?.scrollIntoView({behavior: 'smooth'})
+  }
+  const contactSect = () => {
+    navRef.current.classList.toggle('mobileNav-res')
+    contactRef.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
 
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div ref={appRef} id={'home'} className="App">
+      <Navbar
+      homeClick={homeClick}
+      showNavbar={showNavbar}
+      skillSect ={skillSect}
+      projectScroll ={projectScroll}
+      contactSect={contactSect}
+      ref={navRef}
+       />
+      <Main showProjects={showProjects}/>
+      <Skills ref={skillRef}/>
+      <Projects ref={projectRef}  />
+      <Contact ref={contactRef}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+     
   )
 }
 

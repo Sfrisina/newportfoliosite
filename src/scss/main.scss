@@ -1,8 +1,9 @@
-$primary-color: #010c2a;
+$primary-color: #0a0a0a;
 $secondary-color: #d62828;
-$accent-color: #f77f00;
-$text-color: #fffd7d;
-$info-color: #eae3b8;
+$card-color:#e7ecef;
+$accent-color: rgb(94, 149, 186);
+$text-color: #e7ecef;
+$info-color: #13315c;
 
 html, 
 body {
@@ -19,46 +20,613 @@ button {
     background-color: $secondary-color;
     color: $info-color;
 }
+//nav-section
 .nav-links{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
     padding: 0 1rem;
-    color: $primary-color;
-    font-size: 1.6rem;
-    background-color: $info-color;
+    color: $text-color;
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
  }
 
  #homeLink{
     font-size: 2.1rem;
-    color: $primary-color;
+    color: $accent-color;
     text-decoration: none;
  }
  .mobileNav{
     display: none;
  }
+ .navbar{
+    height: 50px;
+ }
+ .navbar-button-open {
+    display: none;
+ }
+ .navbar-button-close{
+    display: none;
+ }
+ .nav-links span:hover{
+    color: $accent-color;
+ }
+ span a{
+    text-decoration: none;
+ }
+ span a:visited {
+    color: inherit;
+  }
  @media only screen and (max-width: 796px ){
     .mobileNav{
+        position: fixed;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: $primary-color;
+        z-index: 1;
     }
-    .navbar{
-        display: none;
+    .navbar-button-open{
+        display: flex;
+        font-size: 6rem;
+        margin-top: 1%;
+        margin-right: 4%;
+    }
+    .navbar-button-close{
+        display: flex;
+        font-size: 5rem;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+    .nav-links{
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 2.5rem;
+        // gap: 1.5rem;
+        display: flex;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 40%;
+        background-color: $accent-color;
+        transition: 0.5s;
+        transform: translateY(-100vh);
+    }
+    .mobileNav-res{
+        height: 100vh;
+        padding: 15% 0;
+        padding-bottom: clamp(10rem, 18rem, 20rem);
+        justify-content: space-around;
+        transform: none;
     }
     #mobileHomeLink{
         display: block;
         font-size: 3rem;
         margin-top: 2rem;
         margin-left: 1rem;
-        color: $info-color;
+        color: $accent-color;
         text-decoration: none;
     }
     #mobile-icon{
-        width: 25%;
+        width: 15%;
         color: $info-color;
+        margin-right: 1rem;
     }
-    path{
-        color: $info-color;
-    }
+}
+//main-hero section
+ #main{
+    display: flex;
+    background: linear-gradient(rgba(10,10,10,4),rgba(10,10,10,0.6),rgba(10,10,10,1)), url(../assets/tudor-baciu-vc3iVL_znJ8-unsplash.jpg);
+    background-size: cover;
+    height: 535px;
  }
+//  #main-text{
+//     display: flex;
+//  }
+  .main-head{
+    display: flex;
+ }
+ .fade-in-greeting{
+    animation: fadeIn 5s;
+ }
+
+ #greeting {
+    font-size: 6rem;
+    font-weight: 200;
+ }
+ #name-is{
+    font-size: 4rem;
+    font-weight: 200;
+ }
+ #my-name{
+    font-size: 5rem;
+    color: $accent-color;
+    text-shadow: 0 1px 2px $text-color;
+ }
+ .job-title{
+    font-size: 2.54rem;
+    font-weight: 200;
+ }
+ #see-my-work-button{
+  background-color: $text-color;
+  border: 1px solid $text-color;
+  border-radius: 6px;
+  color: $info-color;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 26px;
+  margin: 4px 2px;
+  font-weight: 400;
+  cursor: pointer;
+ }
+ #see-my-work-button a{
+    background-color: $text-color;
+    border: no;
+    color: $info-color;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+   }
+#social-links{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+.fa-brands{
+    font-size: 4rem;
+    color: $accent-color;
+}
+.fa-solid{
+    font-size: 4rem;
+    color: $accent-color;
+}
+//about section
+.section-head {
+    margin:0 20rem;
+    font-size: 2rem;
+    font-weight: 200;
+    position: relative;
+    text-decoration:underline 3px solid $accent-color;
+    top: 1rem;
+}
+.section-head.about{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+#about-text{
+    font-size: 2rem;
+    font-weight: 200;
+    width:30%
+
+}
+#about-items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#headshot{
+    border-radius: 10%;
+    height: 300px;
+}
+@media  screen and (max-width: 1508px){
+    #main{
+        height: auto;
+        margin-top: 5rem;
+   }
+   #about-text{
+    width: 75%;
+   }
+}
+
+@media  screen and (max-width: 693px) {
+
+    .section-head.about{
+        margin: 0;
+        left: 0rem;
+    }
+}
+@media  screen and (max-width: 1500px){
+    #about-items{
+        max-width: 1000px;
+         flex-direction: column;
+        align-items: center;
+        justify-content: none;
+        margin: 0;
+    }
+    #about-text{
+     margin: 10rem 5rem;
+        font-size: 1.8rem;
+    }
+    #headshot{
+        width: 225px;
+    }
+    .section-head h2{
+        display: flex;
+        justify-content: center;
+        top:-3rem;
+        left: 0rem;
+    }
+
+}
+@media  screen and (max-width: 660px){
+    #about-text{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+//skills
+.skills{
+    margin-top: 10rem;
+}
+.section-head-skills {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 200;
+    position: relative;
+    text-decoration:underline 3px solid $accent-color;
+    top: 1rem;
+}
+#skills-title{
+    margin: 0 20rem;
+    text-decoration:underline 3px solid $accent-color;
+}
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+.skill-text{
+    font-weight: 200;
+    text-align: center;
+}
+.skill-list{
+    list-style-type: none;
+    display: flex;
+}
+.skill-list img{
+    list-style-type: none;
+    display: flex;
+    margin-right: 5px;
+}
+
+.skill-icon{
+    color: $info-color;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+
+}
+@media  screen and (max-width: 900px){
+    #skills-title{
+        text-align: center;
+        margin: 0;
+    }
+    #skills{
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills{
+        position: static;
+    }
+    .skill-list{
+        padding: 0;
+    }
+    
+}
+//projects
+
+.projects{
+    margin-top: 10rem;
+}
+.section-head-projects {
+    font-size: 2rem;
+    font-weight: 200;
+    position: relative;
+    text-decoration:underline 3px solid $accent-color;
+    top: 1rem;
+}
+.project-title-section{
+    margin: 0 20rem;
+}
+.project-list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.project-item{
+    display: flex;
+    margin-top: 50px;
+    background-color: $card-color;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px 1px $accent-color;
+    max-width: 966px;
+    padding: 40px 20px;
+    
+}
+.thumbnail{
+    max-width: 400px;
+    margin-right: 5rem;
+}
+.project-title{
+    font-size: 3rem;
+    color: $accent-color;
+}
+.project-stack span{
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 6px;
+    color: $text-color;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.project-description{
+    font-size: 1.5rem;
+    max-width: 900px;
+    color: $primary-color;
+}
+.sourceLink{
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 6px;
+    color: $info-color;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.sourceLink a{
+    text-decoration: none;
+    color: $info-color;
+}
+.liveLink{
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 6px;
+    color: $info-color;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.liveLink a{
+    text-decoration: none;
+    color: $info-color;
+}
+
+@media  screen and (max-width: 1550px){
+  .section-head{
+    position: static;
+  }
+    .project-item-container{
+        flex-direction: column;
+    }
+    .project-item{
+        flex-direction: column;
+        max-width:500px ;
+        align-items: center;
+        left: 15%;
+    }
+   .project-list{
+    display: flex;
+    flex-direction: column;
+   }
+}
+@media  screen and (max-width: 700px){
+    .project-item{
+        flex-direction: column;
+        align-items: center;
+        background-color: $primary-color;
+        box-shadow: none;
+        max-width: 280px;
+        padding: 0;
+        border: 2px solid $card-color;
+        padding: 17px 20px;
+        background-color: $card-color;
+    }
+    .thumbnail{
+        max-width: 250px;
+        margin: 0;
+    }
+  .section-head{
+    margin: 10rem 0 0 0;
+  }
+    .project-title{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .project-stack span{
+        border-radius: 6px;
+        font-size: 10px;
+    }
+    .project-stack{
+        text-align: center;
+    }
+    .project-description{
+        text-align: center;
+        font-size: 1.5rem;
+        max-width: 300px;
+        color: $primary-color;
+    }
+    .sourceLink{
+        background-color: $accent-color;
+        border: 1px solid $accent-color;
+        border-radius: 6px;
+        color: $info-color;
+        padding: 5px 5px;
+        text-align: center;
+        font-size: 10px;
+        margin: 4px 2px;
+    }
+    .sourceLink a{
+        text-decoration: none;
+        color: $info-color;
+    }
+    .liveLink{
+        background-color: $accent-color;
+        border: 1px solid $accent-color;
+        border-radius: 6px;
+        color: $info-color;
+        padding: 5px 5px;
+        text-align: center;
+        font-size: 10px;
+        margin: 4px 2px;
+    }
+    .project-links{
+        text-align: center;
+    }
+
+}
+//contact
+#contact-title{
+    margin: 10rem 20rem;
+    font-size: 3rem;
+    text-decoration:underline 3px solid $accent-color;
+}
+.section-head-contact {
+    margin: 0;
+    font-weight: 200;
+    position: relative;
+    top: 1rem;
+}
+.contact-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.form-label{
+    font-size: 3rem;
+    margin: 5px 5px 5px 5px;
+}
+.form-control{
+    height: 25px;
+    width: 200px;
+}
+.form-control.message{
+    height: 150px;
+    width: 430px;
+}
+.contact-info-1{
+    display: flex;
+    
+}
+.contact-info-2{
+    display: flex;
+    flex-direction: column;
+    
+}
+.btn-submit{
+    color:$info-color;
+    background-color: $text-color;
+    border: 1px solid $accent-color;
+    border-radius: 6px;
+    font-size: 2rem;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.name-form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 6px 10px 10px;
+}
+@media  screen and (max-width: 900px){
+    #contact-title{
+        text-align: center;
+    }
+}
+@media  screen and (max-width: 550px){
+    #contact-title{
+        text-align: center;
+        margin: 10rem 0 5rem 0;
+    }
+    .contact-info-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-control.message{
+        width: 320px;
+    }
+
+}
+
+//animations
+.reveal{
+    position: static;
+    opacity: 0;
+}
+.reveal.active{
+    opacity: 1;
+}
+.active.fade-right{
+    animation: fade-right 2s ease-in;
+}
+.active.fade-left{
+    animation: fade-left 2s ease-in;
+}
+.active.fade-bottom{
+    animation: fade-bottom 2s ease-in;
+}
+.active.fade-in-greeting{
+    animation: fadeIn 2s;
+}
+.active.fade-in-name-is{
+    animation: fadeIn 3s;
+}
+.active.fade-in-my-name{
+    animation: fadeIn 7s;
+}
+.active.fade-in-job-title{
+    animation: fadeIn 10s;
+}
+@keyframes fade-right {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @media only screen and (max-width: 796px ){
+    @keyframes fade-right {
+        100% {
+            transform: translateX(500px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+  }
