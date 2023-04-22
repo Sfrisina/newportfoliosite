@@ -20,7 +20,7 @@ const Contact = (props, ref) => {
     <h2 id='contact-title'>Contact</h2>
 
     <div className="contact-form">
-      <form onSubmit={onSubmit}>
+      <form name="contact" onSubmit={onSubmit} data-netlify="true">
         <div className='contact-info-1'>
         <div className="name-form">
           <label className="form-label" htmlFor="name">
