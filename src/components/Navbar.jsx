@@ -21,7 +21,7 @@ const Navbar = ({homeClick, showNavbar, skillSect, projectScroll, contactSect}, 
         <span onClick={projectScroll}>Projects</span>
         <span onClick={contactSect}>Contact</span>
         <span><a href={sweResume} target="_blank">Resume</a></span>
-        <FontAwesomeIcon className='nav-button navbar-button-close ' onClick ={showNavbar} icon={faTimes}/>
+        <FontAwesomeIcon className='nav-button navbar-button-close' onClick ={showNavbar} icon={faTimes}/>
        </div>
       
     </nav>
