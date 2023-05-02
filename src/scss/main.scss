@@ -1,6 +1,6 @@
 $primary-color: #0a0a0a;
 $secondary-color: #d62828;
-$card-color:#e7ecef;
+$card-color:#232526;
 $accent-color: rgb(94, 149, 186);
 $text-color: #e7ecef;
 $info-color: #13315c;
@@ -375,7 +375,7 @@ button {
 .project-description{
     font-size: 1.5rem;
     max-width: 900px;
-    color: $primary-color;
+    color: $text-color;
 }
 .sourceLink{
     background-color: $accent-color;
