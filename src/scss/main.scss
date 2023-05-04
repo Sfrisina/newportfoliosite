@@ -582,37 +582,20 @@ button {
 .reveal.active{
     opacity: 1;
 }
-.active.fade-right{
-    animation: fade-right 2s ease-in;
-}
-.active.fade-left{
-    animation: fade-left 2s ease-in;
-}
+
+
 .active.fade-bottom{
     animation: fade-bottom 2s ease-in;
 }
-.active.fade-in-greeting{
-    animation: fadeIn 2s;
-}
-.active.fade-in-name-is{
-    animation: fadeIn 3s;
-}
+
+
 .active.fade-in-my-name{
     animation: fadeIn 7s;
 }
 .active.fade-in-job-title{
     animation: fadeIn 10s;
 }
-@keyframes fade-right {
-    0% {
-        transform: translateX(500px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+
 @keyframes fade-bottom {
     0% {
       transform: translateY(100px);
@@ -621,17 +604,5 @@ button {
     100% {
       transform: translateY(0);
       opacity: 1;
-    }
-  }
-  @media only screen and (max-width: 796px ){
-    @keyframes fade-right {
-        100% {
-            transform: translateX(500px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0);
-            opacity: 1;
-        }
     }
   }
