@@ -2,7 +2,7 @@ import React from 'react'
 import { forwardRef } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
-import sweResume from '../assets/Salfrisina-SWE0406.pdf'
+import sweResume from '../assets/swe-resume-0620.pdf'
 
 
 
